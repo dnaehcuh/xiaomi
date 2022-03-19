@@ -1,0 +1,1580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      小米商城-小米11 Ultra、Redmi K40 Pro、MIX FOLD，小米电视官方网站
+    </title>
+    <!-- <link rel="stylesheet" href="iconfont/iconfont.css"/> -->
+    <script src="E:/wfy/VScode/jquery-3.6.0.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        vertical-align:"middle";
+      }
+/* ————————————————————————黑色导航栏——————————————————————————————————————————————————————*/
+      .navblack {
+        height: 40px;
+        background-color: rgb(51, 51, 51);
+        /* position: relative; */
+        font-size: 12px;
+      }
+      .navblack2 {
+        width: 1226px;
+        height: 40px;
+        margin: 0 auto;
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+      }
+      .navblack_left {
+        margin-left: 0;
+        padding: 12px 0;
+        width: 77%;
+      }
+      .navblack_middle {
+        width: 13%;
+        padding: 12px 0;
+      }
+      .navblack_right {
+        height: 40px;
+        width: 10%;
+        /* padding-top: 5px; */
+        background-color: rgb(66, 66, 66);
+        color: rgb(176, 176, 176);
+        /* border: 1px solid orange; */
+        position: relative;
+      }
+      .navblack_left,
+      .navblack_middle,
+      .navblack_right {
+        float: left;
+      }
+      .navblack a {
+        color: rgb(176, 176, 176);
+        text-decoration: none;
+      }
+      .navblack a:hover {
+        color: white;
+      }
+      .s1 {
+        color: rgb(88, 88, 88);
+      }
+      .shoppingcart {
+        /* display: block; */
+        float: left;
+        margin-top: 10px;
+        margin-left: 13%;
+        transform: translateY(-60px);
+        filter: drop-shadow(rgb(176, 176, 176) 0 60px);        
+      }
+      .shoppingcart2 {
+        float: left;
+        padding: 12px 0;        
+      }
+
+      .shoppingtext {
+        width: 316px;
+        height: 98px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+        text-align: center;
+        line-height: 98px;
+        color: #666;
+        position: absolute;
+        top: 40px;
+        left: -195px;
+        z-index: 50;
+        display: none;
+      }
+
+      .navblack_right:hover .shoppingtext {
+        display: block;
+      }
+
+      .navblack_right:hover {
+        color: #FF6700;
+        background-color: #fff;
+      }
+
+      .navblack_right:hover .shoppingcart {
+        /* background: url(images/购物车.png) center center no-repeat;
+        background-size: 20px 20px; */
+        transform: translateY(-60px);
+        filter: drop-shadow(#FF6700 0 60px);  
+      }
+
+/* _________________________________轮播图__________________________________________________*/
+      .banner {
+        /* border:1px solid tomato; */
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto 15px auto;
+        width: 1226px;
+        height: 460px;
+        z-index: 10;
+      }
+      .banner ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;        
+      }
+      .hot {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .hot li {
+        float: left;
+      }
+      .dot {
+        position: absolute;
+        bottom: 26px;
+        right: 32px;
+        width: 100%;
+        text-align: right;
+        font-size: 0;
+      }
+      .dot li {
+        display: block;
+        display: inline-block;
+        margin: 0 5px;
+        width: 5px;
+        height: 5px;
+        border-radius: 100%;
+        border: 2px solid rgb(172, 172, 172);
+        background: rgb(104, 103, 103);
+        cursor: pointer;
+      }
+      .dot .on {
+        background-color: #fff;
+      }
+
+      /* .arrow {
+        display: none;
+      } */
+
+      /* .arrow .next,
+      .arrow .prev {
+        color: rgb(245, 245, 245);
+      } */
+
+      .arrow span {
+        display: block;
+        width: 40px;
+        height: 70px;
+        /* background: rgba(0, 0, 0, 0); */
+        color: #b0b0b0;
+        text-align: center;
+        font-size: 50px;
+        line-height: 65px;
+        cursor: pointer;
+        border-radius: 6%;
+      }
+
+      .arrow:hover span {
+        display: block;
+        width: 40px;
+        height: 70px;
+        background: rgb(123, 123, 123);
+        color: rgb(245, 245, 245);
+        text-align: center;
+        font-size: 50px;
+        line-height: 65px;
+        cursor: pointer;
+        border-radius: 6%;
+      }
+      .arrow .next {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -35px;
+      }
+      .arrow .prev {
+        position: absolute;
+        top: 50%;
+        left: 233px;
+        margin-top: -35px;
+      }
+
+/* ____________________________底部一栏___________________________________________ */
+      .box_bottom {
+        height: 170px;
+        /* position: relative; */
+        margin-bottom: 50px;
+      }
+      .box_bottom2 {
+        /* border:1px solid tomato; */
+        width: 1227px;
+        /* height: 170px; */
+        /* position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); */
+        margin: 0 auto;
+      }
+
+      .box_bottomleft {
+        /* border:1px solid tomato; */
+        width: 234px;
+        height: 170px;
+        float: left;
+        background-color: rgb(95, 87, 80);
+      }
+
+      .box_bottomleft ul li {
+        /* border:1px solid tomato; */
+        float: left;
+        list-style: none;
+        opacity: 60%;
+        /* padding: 15px 10px 15px 10px; */
+        /* padding-top: 10px; */
+        position: relative;
+      }
+
+      .box_bottomleft ul li img {
+        /* border:1px solid tomato; */
+        width: 25px;
+        height: 25px;
+        /* margin-left: 10px; */
+      }
+
+      .box_bottomleft ul li a {
+        /* border:1px solid tomato; */
+        /* color: rgb(231, 231, 231); */
+        width: 76px;
+        height: 64px;
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        display:inline-block;
+        text-align:center;
+        padding-top: 20px;
+        /* border-top: 1px solid rgb(119, 110, 101); */
+        /* border-right: 1px solid rgb(119, 110, 101); */
+      }
+
+      /* 设置底部左边盒子边框长度 */
+      #a::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        height: 2px;
+        width: 56px;
+        background-color: rgb(119, 110, 101);
+      }
+      #b::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        height: 2px;
+        width: 56px;
+        background-color: rgb(119, 110, 101);
+      }
+      #c::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: auto;
+        bottom: 0;
+        right: auto;
+        height: 2px;
+        width: 56px;
+        background-color: rgb(119, 110, 101);
+      }
+      #a::after {
+        content: '';
+        position: absolute;
+        left: auto;
+        top: 10px;
+        bottom: auto;
+        right: 0;
+        height: 64px;
+        width: 1px;
+        background-color: rgb(119, 110, 101);
+      }
+      #b::after {
+        content: '';
+        position: absolute;
+        left: auto;
+        top: 10px;
+        bottom: auto;
+        right: 0;
+        height: 64px;
+        width: 1px;
+        background-color: rgb(119, 110, 101);
+      }
+      #d::before {
+        content: '';
+        position: absolute;
+        left: auto;
+        top: 10px;
+        bottom: auto;
+        right: 0;
+        height: 64px;
+        width: 1px;
+        background-color: rgb(119, 110, 101);
+      }
+      #e::before {
+        content: '';
+        position: absolute;
+        left: auto;
+        top: 10px;
+        bottom: auto;
+        right: 0;
+        height: 64px;
+        width: 1px;
+        background-color: rgb(119, 110, 101);
+      }
+
+      .box_bottomleft ul li:hover {
+        opacity: 100%;
+      }
+
+      .box_bottomright {
+        /* border:1px solid tomato; */
+        width: 993px;
+        /* height: 170px; */
+        float: left;
+      }
+      .box_bottomright ul li {
+        float: left;
+        list-style: none;
+        margin-left: 15px;
+        
+      }
+       .box_bottomright ul li a {
+        display: block;
+        /* height: 130px; */
+      } 
+
+      .box_bottomright a:hover {
+        box-shadow:  10px 10px 20px rgb(210, 210, 210);
+      }
+
+/* ________________________顶部白色导航栏___________________________________________________ */
+      .navwhite {
+        /* border:1px solid tomato; */
+        width: 1226px;
+        height: 100px;
+        margin: 0 auto;
+        /* position: relative; */
+      }
+
+      .navwhite .logo {
+        /* border: 1px solid tomato; */
+        display: block;
+        float: left;
+        width: 58px;
+        height: 54px;
+        margin-left: 21px;
+        margin-top: 22px;
+        background: url(images/logo.jpg) center center no-repeat;
+        margin-right: 45px;
+      }
+
+      .navwhite .nav .nav-item {
+        /* border: 1px solid tomato; */
+        margin-left: 16px;
+        float: left;
+        margin-top: 24px;
+        padding: 12px 4px 0;
+        height: 62px;
+      }
+
+      .navwhite .nav .nav-item .tit {
+        font-size: 16px;
+        color: #666;
+      }
+
+      .navwhite .nav .nav-item:hover .tit{
+        color: #FF6700;
+      }
+
+      .navwhite .nav-item .pop {
+        position: absolute;
+        width: 100%;
+        height: 230px;
+        /* background: red; */
+        left: 0px;
+        top: 140px;
+        background-color: #fff;
+        box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+        border-top: 1px solid #e0e0e0;
+        display: none;
+        z-index: 100;
+        /* text-align: center; */
+      }
+
+      .down-ul-container {
+        width: 1226px;
+        margin: 0 auto;
+      }
+      
+      /* .navwhite .down-ul {
+        overflow: hidden;
+      } */
+
+      .navwhite .down-li {
+        width: 204px;
+        float: left;
+        padding-top: 30px;
+        text-align: center;
+        /* border:1px solid tomato; */
+        position: relative;
+      }
+
+      .navwhite .down-li .pic img {
+        width: 160px;
+        height: 110px;
+      }
+      
+      .navwhite .down-li .name {
+        font-weight: normal;
+        font-size: 13px;
+        margin-top: 20px;
+        color: black;
+      }
+
+      .navwhite .down-li .price {
+        color: #FF6700;
+        margin-top: 5px;
+        font-size: 13px;
+      }
+
+      .navwhite .down-li i {
+        background-color: #e0e0e0;
+        width: 2px;
+        height: 100px;
+        position: absolute;
+        right: 0px;
+        top: 35px;
+      }
+
+      .navwhite .down-li:last-child i {
+        display: none;
+      }
+
+      .navwhite .nav .nav-item:hover .pop{
+        display: block;
+      }
+
+/* ————————————————————————全部分类菜单样式———————————————————————————————————————————————— */
+      #page-all-nav {
+        position: relative;
+        visibility: hidden;
+      }
+
+      #page-all-nav .slider-nav {
+        visibility: visible;
+      }
+      
+      .slider-nav {
+        position:absolute;
+        width: 234px;
+        height: 420px;
+        /* border: 1px solid #FF6700; */
+        border: none;
+        background-color: rgba(105,101,101,0.6);
+        right: 10px;
+        top: 76px;
+        padding: 20px 0;
+        z-index: 50;
+      }
+
+      .slider-nav .slider-li {
+        line-height: 42px;       
+      }
+
+      .slider-nav .slider-li .name {
+        font-size: 14px;
+        display: block;
+        padding: 0 24px 0 30px;
+        color: #fff;
+      }
+
+      .slider-nav .slider-li .name span {
+        margin-right: 5px;
+      }
+
+      .slider-nav .slider-li .iconfont {
+        float: right;
+        opacity: 60%;
+        font-size: 19px;
+      }
+
+      .slider-nav .slider-li:hover .name{
+        background-color: #FF6700;
+        color: #fff;
+      }
+
+      .slider-nav .slider-pop {
+        position: absolute;
+        width: 992px;
+        height: 458px;
+        background-color: #fff;
+        left: 233px;
+        top: 0px;
+        border: 1px solid #e0e0e0;
+        border-left: none;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.18);
+        display: none;
+      }
+
+      .slider-nav .pop-li {
+        float: left;
+        width: 223px;
+        padding-left: 24px;
+        overflow: hidden;
+        height: 56px;
+        /* margin-bottom: 0px; */
+        padding-top: 20px;
+        color: black;
+        font-size: 14px;
+      }
+
+      .slider-nav .pop-li img {
+        width: 40px;
+        height: 40px;
+        float: left;
+        margin-right: 16px;
+      }
+
+      .slider-nav .pop-li:hover p{
+        color: #FF6700;
+      }
+
+      .slider-nav .slider-li:hover .slider-pop{
+        display: block;
+      }
+
+      /* 搜索框 */
+      .navwhite .search {
+        float: right;
+        position: relative;
+        margin-top: 20px;
+      }
+
+      .navwhite .search .q {
+        width: 234px;
+        height: 48px;
+        border: 1px solid #e0e0e0;
+        border-radius: 3%;
+        outline: none;
+        line-height: 48px;
+        padding-left: 4px;
+        float: left;
+      }     
+
+      .navwhite .search .btn {
+        width: 52px;
+        height: 50px;
+        border: 1px solid #e0e0e0;
+        border-left: none;
+        float: left;
+        background: #fff url(images/search.png) center center no-repeat;
+        background-size: 20px 20px;
+        border-radius: 3%;
+      }
+
+      .search:hover .q,
+      .search:hover .btn{
+        border-color: #b0b0b0; 
+      } 
+
+      .navwhite .search .tags {
+        font-size: 12px;
+        position: absolute;
+        top: 18px;
+        left: 15px;
+        color: #666;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="navblack">
+      <!-- 顶部黑色导航条 -->
+      <div class="navblack2">
+        <div class="navblack_left">
+          <a href="https://www.mi.com/index.html" target="_blank">小米商城</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="https://home.miui.com/" target="_blank">MIUI</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="https://iot.mi.com/" target="_blank">loT</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="https://i.mi.com/" target="_blank">云服务</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="https://airstar.com/home" target="_blank">天星数科</a>
+        </div>
+        <div class="navblack_middle">
+          <a href="#" onclick="openWindow1()">登录</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="#" onclick="openWindow1()">注册</a>
+          <span class="s1">&nbsp|&nbsp</span>
+          <a href="#" onclick="openWindow1()">消息通知</a>
+        </div>
+        <div class="navblack_right">
+          <div class="shoppingcart">
+            <img src="images/购物车.png" width="20px" height="20px" />
+          </div>
+          <div class="shoppingcart2">&nbsp购物车（0）</div>
+          <div class="shoppingtext">购物车中还没有商品，赶紧选购吧！</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navwhite">
+      <!-- 顶部白色导航条 -->
+      <div class="container">
+        <a href="" class="logo"></a>
+        <ul class="nav">
+          <li class="nav-item" id="page-all-nav">
+            <a href="" class="tit">全部商品分类</a>
+            <div class="slider-nav">
+              <ul class="slider-ul">
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>手机</span>
+                    <span>电话卡</span>
+                    <span class="iconfont">></span>
+                  </a>
+                  <div class="slider-pop">
+                    <a href="https://www.mi.com/a/h/13951.html" target="_blank" class="pop-li">
+                      <img src="images/001.png">
+                      <p>小米10</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/002.png">
+                      <p>小米11</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/003.png">
+                      <p>小米12</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/004.png">
+                      <p>小米13</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/005.jpg">
+                      <p>小米999</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/006.jpg">
+                      <p>小米10000</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/007.png">
+                      <p>黑鲨4</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/008.png">
+                      <p>黑鲨4 Pro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/009.jpg">
+                      <p>黑鲨444</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/010.png">
+                      <p>黑鲨4 ProPro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/011.jpg">
+                      <p>Redmi 9A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/012.jpg">
+                      <p>Redmi 10A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/013.jpg">
+                      <p>Redmi 999A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/014.jpg">
+                      <p>Redmi 9B</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/016.jpg">
+                      <p>Redmi 9APro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/017.jpg">
+                      <p>Redmi 9A青春</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/018.jpg">
+                      <p>Redmi 9A至尊</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/019.jpg">
+                      <p>小米盒子</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/020.png">
+                      <p>收音机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                 
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>电视</span>
+                    <span>盒子</span>
+                    <span class="iconfont">></span>
+                  </a>
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/019.jpg">
+                      <p>小米盒子</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/020.png">
+                      <p>收音机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/001.png">
+                      <p>小米10</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/002.png">
+                      <p>小米11</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/003.png">
+                      <p>小米12</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/004.png">
+                      <p>小米13</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/005.jpg">
+                      <p>小米999</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/006.jpg">
+                      <p>小米10000</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/007.png">
+                      <p>黑鲨4</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/008.png">
+                      <p>黑鲨4 Pro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/009.jpg">
+                      <p>黑鲨444</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/017.jpg">
+                      <p>Redmi 9A青春</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/018.jpg">
+                      <p>Redmi 9A至尊</p>
+                    </a>
+                  </div>                  
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>笔记本</span>
+                    <span>显示器</span>
+                    <span class="iconfont">></span>
+                  </a> 
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/001.png">
+                      <p>小米10</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/002.png">
+                      <p>小米11</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/003.png">
+                      <p>小米12</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/004.png">
+                      <p>小米13</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/005.jpg">
+                      <p>小米999</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/006.jpg">
+                      <p>小米10000</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/007.png">
+                      <p>黑鲨4</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/008.png">
+                      <p>黑鲨4 Pro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/009.jpg">
+                      <p>黑鲨444</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/010.png">
+                      <p>黑鲨4 ProPro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/011.jpg">
+                      <p>Redmi 9A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/012.jpg">
+                      <p>Redmi 10A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/013.jpg">
+                      <p>Redmi 999A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/014.jpg">
+                      <p>Redmi 9B</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/016.jpg">
+                      <p>Redmi 9APro</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/017.jpg">
+                      <p>Redmi 9A青春</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/018.jpg">
+                      <p>Redmi 9A至尊</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/019.jpg">
+                      <p>小米盒子</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/020.png">
+                      <p>收音机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                  </div>                
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>家电</span>
+                    <span>插线板</span>
+                    <span class="iconfont">></span>
+                  </a> 
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/011.jpg">
+                      <p>Redmi 9A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/012.jpg">
+                      <p>Redmi 10A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/013.jpg">
+                      <p>Redmi 999A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/014.jpg">
+                      <p>Redmi 9B</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                 
+                </li>               
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>出行</span>
+                    <span>穿戴</span>
+                    <span class="iconfont">></span>
+                  </a>  
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/012.jpg">
+                      <p>Redmi 10A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/013.jpg">
+                      <p>Redmi 999A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/014.jpg">
+                      <p>Redmi 9B</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                  
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>智能</span>
+                    <span>路由器</span>
+                    <span class="iconfont">></span>
+                  </a> 
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                 
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>电源</span>
+                    <span>配件</span>
+                    <span class="iconfont">></span>
+                  </a> 
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/013.jpg">
+                      <p>Redmi 999A</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/014.jpg">
+                      <p>Redmi 9B</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                  
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>健康</span>
+                    <span>儿童</span>
+                    <span class="iconfont">></span>
+                  </a>
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/015.jpg">
+                      <p>Redmi 9APlus</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/021.jpg">
+                      <p>电视</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                  
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>耳机</span>
+                    <span>音箱</span>
+                    <span class="iconfont">></span>
+                  </a>
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/022.jpg">
+                      <p>打印机</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>                    
+                </li>
+                <li class="slider-li">
+                  <a href="" class="name">
+                    <span>生活</span>
+                    <span>箱包</span>
+                    <span class="iconfont">></span>
+                  </a>   
+                  <div class="slider-pop">
+                    <a href="" class="pop-li">
+                      <img src="images/023.png">
+                      <p>数据线</p>
+                    </a>
+                    <a href="" class="pop-li">
+                      <img src="images/024.png">
+                      <p>游戏本</p>
+                    </a>
+                  </div>              
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">小米手机</a>
+            <div class="pop">
+              <ul class="down-ul-container">
+                <li class="down-li">
+                  <a href="https://www.mi.com/a/h/13951.html" target="_blank" class="pic">
+                    <img src="images/1a.png">
+                    <h3 class="name">小米MIX FOLD</h3>
+                    <p class="price">9999元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/2a.png">
+                    <h3 class="name">小米9</h3>
+                    <p class="price">1088元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/3a.png">
+                    <h3 class="name">小米10</h3>
+                    <p class="price">4569元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/4a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/5a.png">
+                    <h3 class="name">小米11</h3>
+                    <p class="price">6666元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li last">
+                  <a href="" class="pic">
+                    <img src="images/6a.png">
+                    <h3 class="name">小米终极PLUS+</h3>
+                    <p class="price">1000000元起</p>
+                  </a>                 
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">Redmi红米</a>
+            <div class="pop">
+              <ul class="down-ul-container">               
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/3a.png">
+                    <h3 class="name">小米10</h3>
+                    <p class="price">4569元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/4a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/5a.png">
+                    <h3 class="name">小米11</h3>
+                    <p class="price">6666元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li last">
+                  <a href="" class="pic">
+                    <img src="images/6a.png">
+                    <h3 class="name">小米终极PLUS+</h3>
+                    <p class="price">1000000元起</p>
+                  </a>                 
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/1a.png">
+                    <h3 class="name">小米MIX FOLD</h3>
+                    <p class="price">9999元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/2a.png">
+                    <h3 class="name">小米9</h3>
+                    <p class="price">1088元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">电视</a>
+            <div class="pop">
+              <ul class="down-ul-container">
+                <li class="down-li last">
+                  <a href="" class="pic">
+                    <img src="images/6a.png">
+                    <h3 class="name">小米终极PLUS+</h3>
+                    <p class="price">1000000元起</p>
+                  </a>                 
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/1a.png">
+                    <h3 class="name">小米MIX FOLD</h3>
+                    <p class="price">9999元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/2a.png">
+                    <h3 class="name">小米9</h3>
+                    <p class="price">1088元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/3a.png">
+                    <h3 class="name">小米10</h3>
+                    <p class="price">4569元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/4a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/5a.png">
+                    <h3 class="name">小米11</h3>
+                    <p class="price">6666元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">笔记本</a>
+            <div class="pop">
+              <ul class="down-ul-container">             
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/4a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/5a.png">
+                    <h3 class="name">小米11</h3>
+                    <p class="price">6666元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">家电</a>
+            <div class="pop">
+              <ul class="down-ul-container">             
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/5a.png">
+                    <h3 class="name">小米11</h3>
+                    <p class="price">6666元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>                
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">路由器</a>
+            <div class="pop">
+              <ul class="down-ul-container">             
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/4a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>               
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="" class="tit">智能硬件</a>
+            <div class="pop">
+              <ul class="down-ul-container">             
+                <li class="down-li">
+                  <a href="" class="pic">
+                    <img src="images/1a.png">
+                    <h3 class="name">小米10青春</h3>
+                    <p class="price">2777元起</p>                   
+                  </a> 
+                  <i></i>                                
+                </li>               
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.mi.com/service" target="_blank" class="tit">服务</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.xiaomi.cn/" target="_blank" class="tit">社区</a>
+          </li>
+        </ul>
+        <div class="search">
+          <form action="" method="POST">
+            <input type="text" class="q">
+            <input type="submit" class="btn" value="">
+            <span class="tags">小米11</span>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    
+      
+      <div class="navwhite_right"></div>
+    </div>
+
+    <div class="box">
+      <!-- 中间主体 -->
+      <!-- <div></div> -->
+      <div class="banner">
+        <ul class="hot">
+          <li>
+            <a href="https://www.mi.com/buy/detail?product_id=10000296" target="_blank"><img src="images/1.jpg" /></a>
+          </li>
+          <li>
+            <a href="https://www.mi.com/a/h/13951.html" target="_blank"><img src="images/2.jpg" /></a>
+          </li>
+          <li>
+            <a href="https://www.mi.com/a/h/20885.html?sign=0974c4be066ef79da5a915097858def9" target="_blank"><img src="images/3.jpg" /></a>
+          </li>
+          <li>
+            <a href="https://www.mi.com/a/h/21144.html?sign=e47a898205faf841bea7f16f68a76b58" target="_blank"><img src="images/4.jpg" /></a>
+          </li>
+          <li>
+            <a href="https://www.mi.com/a/h/21167.html?sign=593a325bf6001b19581d751eb4783fc5" target="_blank"><img src="images/5.jpg" /></a>
+          </li>
+        </ul>
+        <ul class="dot">
+          <li class="on"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <div class="arrow">
+          <span class="prev">
+            <</span><span class="next">></span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box_bottom">
+      <!-- 底部 -->
+      <div class="box_bottom2">     
+        <div class="box_bottomleft">
+        <ul>
+          <li><a id="a" href="https://www.mi.com/buy/seckill" target="_blank"><img src="images/a.png"><br>小米秒杀</a></li>
+          <li><a id="b" href="https://qiye.mi.com/" target="_blank"><img src="images/b.png"><br>企业团购</a></li>
+          <li><a id="c" href="https://www.mi.com/order/fcode" target="_blank"><img src="images/c.png"><br>F码通道</a></li>
+          <li><a id="d" href="https://www.mi.com/mimobile" target="_blank"><img src="images/d.png"><br>米粉卡</a></li>
+          <li><a id="e" href="https://www.mi.com/a/h/16769.html" target="_blank"><img src="images/e.png"><br>以旧换新</a></li>
+          <li><a id="f" href="https://account.xiaomi.com" target="_blank"><img src="images/f.png"><br>话费充值</a></li>
+        </ul>
+        </div>
+        <div class="box_bottomright">
+        <ul>
+          <li><a href="https://www.mi.com/buy/detail?product_id=12511" target="_blank"><img src="images/11.jpg"  /></a></li>
+          <li><a href="https://www.mi.com/mi11" target="_blank"><img src="images/22.jpg" /></a></li>
+          <li><a href="https://www.mi.com/flipbudspro" target="_blank"><img src="images/33.png" /></a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  <script>
+    function openWindow1() {
+      window.open('', 'popwindow', 'height=500 width=500'); //打开一个新窗口
+    }
+
+    //轮播图
+    $(function () {
+        //复制列表中的第一个图片，追加到列表最后，设置ul的宽度为图片张数*图片宽度
+        var width = 1226; //每张图片宽度
+        var firstimg = $('.hot li').first().clone();
+        $('.hot')
+          .append(firstimg)
+          .width($('.hot li').length * width);
+
+        //1.自动切换图片
+        var i = 0; //当前显示的图片索引
+        function imgChange() {
+          ++i;
+          isCrack();
+          dotChange();
+        }
+
+        //2.无缝轮播
+        var speed = 600; //动画时间
+        function isCrack() {
+          if (i == $('.hot li').length) {
+            i = 1;
+            $('.hot').css({ left: 0 });
+          }
+          $('.hot')
+            .stop()
+            .animate({ left: -i * width }, speed);
+        }
+
+        //3.设置周期计时器，实现图片自动切换
+        var timer = null; //定时器
+        var delay = 1000; //图片自动切换的时间间隔
+        timer = setInterval(imgChange, delay);
+
+        //4.鼠标移入，暂停自动播放，移出，开始自动播放
+        $('.banner').hover(
+          function () {
+            clearInterval(timer);
+          },
+          function () {
+            timer = setInterval(imgChange, delay);
+          }
+        );
+
+        //5.自动切换对应的圆点
+        function dotChange() {
+          if (i == $('.hot li').length - 1) {
+            //判断若是最后一张图的话，设置对应的第一张图片的圆点
+            $('.dot li').eq(0).addClass('on').siblings().removeClass('on');
+          } else {
+            //根据数组索引设置相应的圆点
+            $('.dot li').eq(i).addClass('on').siblings().removeClass('on');
+          }
+        }
+
+        //6.鼠标划入圆点
+        $('.dot li').mouseover(function () {
+          i = $(this).index();
+          $('.hot')
+            .stop()
+            .animate(
+              {
+                left: -i * width,
+              },
+              200
+            );
+          dotChange();
+        });
+
+        // 7.设置左右切换的箭头显示和隐藏
+        // $('.banner').hover(
+        //   function () {
+        //     $('.arrow').show();
+        //   },
+        //   function () {
+        //     $('.arrow').hide();
+        //   }
+        // );
+
+        //8.向右箭头
+        $('.next').click(function () {
+          imgChange();
+        });
+
+        //9.向左箭头
+        $('.prev').click(function () {
+          --i;
+          //判断，若当前是第一张图片，则切换到最后一张图片并设置样式
+          if (i == -1) {
+            i = $('.hot li').length - 2;
+            $('.hot').css({
+              left: -($('.hot li').length - 1) * width,
+            });
+          }
+          $('.hot')
+            .stop()
+            .animate(
+              {
+                left: -i * width,
+              },
+              speed
+            );
+          dotChange();
+        });
+      });
+  
+  </script>
+</html>
